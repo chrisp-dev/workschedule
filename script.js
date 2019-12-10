@@ -14,7 +14,7 @@ $(document).ready(function () {
      * @usage $('#area-'+hr).styleHours();
      */
     $.fn.styleHours = function () {
-        let nowHour = moment().hour() - 12;
+        let nowHour = moment().hour();
         let hour = $(this)[0].id.split("-")[1];
         if (nowHour === hour) {
             $(this).addClass('present');
