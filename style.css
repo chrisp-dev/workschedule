@@ -69,3 +69,14 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+.blink {
+  animation: blinkMe 0.5s 5;
+}
+
+@keyframes blinkMe {
+  0%{background:lightgrey}
+  49%{background:green}
+  99%{background:lightgrey}
+  100%{background:green}
+}
