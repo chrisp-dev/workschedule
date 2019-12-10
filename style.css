@@ -71,12 +71,11 @@ textarea{
 }
 
 .blink {
-  animation: blinkMe 0.5s 5;
+  animation: blinkMe 0.4s 3;
 }
 
 @keyframes blinkMe {
   0%{background:lightgrey}
-  49%{background:green}
-  99%{background:lightgrey}
-  100%{background:green}
+  39%{background:rgba(0, 128, 0, 0.616)}
+  100%{background:lightgrey}
 }
