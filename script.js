@@ -2,7 +2,7 @@ $(document).ready(function () {
     // step 1 - variables
     var hourArray = [9, 10, 11, 12, 13, 14, 15, 16, 17];
     var hourLabelArray = ['9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm'];
-    var localContent = JSON.parse(localStorage.getItem('schedule'));
+    var localContent = JSON.parse(localStorage.getItem('schedule')) || {};
 
     // test localContent object:
     // var lc = {
@@ -53,6 +53,8 @@ $(document).ready(function () {
 
         if (localContent[hour] && localContent[hour].length) {
             $(txtArea).val(localContent[hour]);
+        } else {
+            $(txtArea).val("");
         }
 
         let saveBtn = $('<button id="save-' + hour + '" class="saveBtn col col-sm-1">');
