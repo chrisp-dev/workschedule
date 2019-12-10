@@ -15,7 +15,8 @@ $(document).ready(function () {
      */
     $.fn.styleHours = function () {
         let nowHour = moment().hour();
-        let hour = $(this)[0].id.split("-")[1];
+        let hour = parseInt($(this)[0].id.split("-")[1]);
+        
         if (nowHour === hour) {
             $(this).addClass('present');
         } else if (nowHour > hour) {
